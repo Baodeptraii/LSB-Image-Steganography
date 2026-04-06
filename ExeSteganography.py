@@ -58,7 +58,7 @@ class ExeSteganography:
         img_array = np.array(img)
         capacity = img_array.size
         return img_array, capacity
-    
+        
     def embed_exe(self, image_path: str, exe_path: str, output_path: str) -> bool:
         """
         Embed an executable file into a carrier image.
