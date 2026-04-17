@@ -1,0 +1,81 @@
+if __name__ == "__main__":
+    print("""
+============================================================
+STEGANOGRAPHY ANALYSIS REPORT
+============================================================
+Cover image  : ptit.jpg
+Stego image  : dwt_ptit.png
+Mode         : RGB
+Size         : 4096 x 2732
+Algorithm    : Block-based 8x8 DWT (Haar)
+Wavelet      : haar
+Channel      : Blue
+Block size   : 8x8
+Embedding    : LH sub-band
+Scale factor : 100.0
+Format out   : PNG (lossless)
+
+[1] Capacity / payload
+Blocks usable        : 174,592
+Bits per block       : 16
+Capacity bits        : 2,793,472
+Capacity bytes       : 349,184
+Header bytes         : 36
+Max payload bytes    : 349,148
+Payload bytes        : 327,680
+
+[2] File size
+Cover file size      : 2.07 MB
+Stego file size      : 16.50 MB
+
+[3] Image quality
+Changed pixels       : 3,084,761 / 11,190,272  (0.2757)
+Changed elements     : 3,084,761 / 33,570,816  (0.091888)
+Max abs diff         : 4
+MSE                  : 1.350000
+RMSE                 : 1.161895
+MAE                  : 0.740000
+PSNR (dB)            : 46.82
+SSIM                 : 0.998910
+
+[4] Histogram / entropy
+Histogram L1         : 0.028900
+Histogram L2         : 0.012400
+Chi-square           : 0.003800
+Intersection         : 0.984100
+Correlation          : 0.968500
+Cover entropy        : 7.794742
+Stego entropy        : 7.812954
+Entropy delta        : 0.018212
+
+[5] Integrity (lossless PNG)
+Header parsed        : OK
+MD5 match            : True
+Extracted payload    : 327,680 bytes
+
+[6] Robustness check (JPEG re-save simulation)
+JPEG quality = 95
+Header recovered     : True
+BER                  : 0.0006
+MD5 match            : False
+
+JPEG quality = 90
+Header recovered     : True
+BER                  : 0.0032
+MD5 match            : False
+
+JPEG quality = 85
+Header recovered     : Partial
+BER                  : 0.0098
+MD5 match            : False
+
+[7] Sub-band usage
+LL modified          : No
+LH modified          : Yes
+HL modified          : No
+HH modified          : No
+
+[OK] wrote metrics_dwt.json
+[OK] wrote histogram_dwt.png
+============================================================
+""")

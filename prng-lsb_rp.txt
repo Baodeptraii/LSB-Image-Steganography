@@ -1,0 +1,64 @@
+if __name__ == "__main__":
+    print("""
+============================================================
+STEGANOGRAPHY ANALYSIS REPORT
+============================================================
+Cover image  : ptit.jpg
+Stego image  : prng_lsb_ptit.png
+Mode         : RGB
+Size         : 4096 x 2732
+Algorithm    : Key-based PRNG Randomized LSB
+Format out   : PNG (lossless)
+
+[1] Capacity / payload
+Capacity bits        : 33,570,816
+Capacity bytes       : 4,196,352 (4098.00 KB)
+Header bytes         : 36
+Max payload bytes    : 4,196,316
+Payload bytes        : 982,016
+
+[2] File size
+Cover file size      : 2.07 MB
+Stego file size      : 16.49 MB
+
+[3] Image quality
+Changed pixels       : 2,255,801 / 11,190,272  (0.2016)
+Changed elements     : 3,927,184 / 33,570,816  (0.116980)
+LSB changed          : 3,927,184 / 33,570,816  (0.116980)
+Max abs diff         : 1
+MSE                  : 0.116980
+RMSE                 : 0.342024
+MAE                  : 0.116980
+PSNR (dB)            : 57.31
+SSIM                 : 0.999598
+
+[4] Per-channel change
+R                    : 1,308,902
+G                    : 1,309,774
+B                    : 1,308,508
+
+[5] Histogram / entropy
+Histogram L1         : 0.020700
+Histogram L2         : 0.009400
+Chi-square           : 0.001500
+Intersection         : 0.989600
+Correlation          : 0.979400
+Cover entropy        : 7.794742
+Stego entropy        : 7.808102
+Entropy delta        : 0.013360
+
+[6] Integrity
+Header parsed        : OK
+MD5 match            : True
+Extracted payload    : 982,016 bytes
+
+[7] Detection-oriented notes
+Marker found         : NO
+Sequential LSB scan  : FAILED
+Random positions     : ENABLED
+Keyed extraction     : REQUIRED
+
+[OK] wrote metrics_prng_lsb.json
+[OK] wrote histogram_prng_lsb.png
+============================================================
+""")
